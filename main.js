@@ -2,6 +2,7 @@ let email = document.querySelector("#email")
 let submitBtn = document.querySelector("#submit")
 let dissmissBtn = document.querySelector("#dissmiss")
 let label = document.querySelector("label")
+let span = document.querySelector("span")
 let seccessSec = document.querySelector(".seccess")
 let signSec = document.querySelector(".sign-up")
 let reg = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
@@ -16,6 +17,7 @@ submitBtn.addEventListener("click",(e)=>{
     validate()
     if(state){
         signSec.classList.add("hide")
+        span.textContent = email.value
         seccessSec.classList.remove("hide")
         state = false
     }
